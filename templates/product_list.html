@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Product List | Torio Kids 2016</title>
+<meta name="viewport" content="target-densitydpi=device-dpi; width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+<meta name="HandheldFriendly" content="true" />
+<link rel="stylesheet" type="text/css" href="css/fontAttach/fontattach.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css">
+<link rel="stylesheet" type="text/css" href="css/lightbox.css">
+<link rel="stylesheet" type="text/css" href="css/selectordie.css">
+<link rel="stylesheet" type="text/css" href="css/toriokids2016.css">
+<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
+<script type="text/javascript" src="js/selectordie.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</head>
+
+<body>
+	<div class="wrapper">
+    	<header>
+        	<div class="mainLogo">
+            	<img src="images/toriologo.png">
+            </div>
+        </header>
+        <a href="#" class="burgericon">mobilemenu</a>
+        <div class="mobilenavBox">
+            <div class="mobilenavWrapper">
+                <div class="mobilenavBtn">
+                    <a href="#" class="mobilecartBtn">cartbutton</a>
+                    <a href="#" class="mobilecloseBtn" onClick="hide_mobilenav();">closebutton</a>
+                </div>
+                <ul class="mobilenavCategory">
+                    <li><a href="#">BOYS</a>
+                        <ul class="submenu">
+                            <li><a href="#">newborn&nbsp;&nbsp;<span>(0-18 months)</span></a></li>
+                            <li><a href="#">toddler&nbsp;&nbsp;<span>(12-36 months)</span></a></li>
+                            <li><a href="#">infant&nbsp;&nbsp;<span>(1-4 years)</span></a></li>
+                            <li><a href="#">kids&nbsp;&nbsp;<span>(2-8 years)</span></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">GIRLS</a>
+                        <ul class="submenu">
+                            <li><a href="#">newborn&nbsp;&nbsp;<span>(0-18 months)</span></a></li>
+                            <li><a href="#">toddler&nbsp;&nbsp;<span>(12-36 months)</span></a></li>
+                            <li><a href="#">infant&nbsp;&nbsp;<span>(1-4 years)</span></a></li>
+                            <li><a href="#">kids&nbsp;&nbsp;<span>(2-8 years)</span></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">BEST SELLER</a></li>
+                    <li><a href="#">SALE</a></li>
+                </ul>
+                <a href="#" class="mobileSearch" onClick="show_search_popup();">mobilesearch</a>
+                <div class="mobileFooter">
+                    <ul>
+                    	<li><a href="#">Log in</a></li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">Need help</a></li>
+                        <li><a href="#">Payment configuration</a></li>
+                        <li><a href="#">Terms &amp; Conditions</a></li>
+                    	<li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                    <div class="bankLink">
+                        <p>Secure Payments via</p>
+                        <img src="images/bankicon.png">
+                    </div>
+                    <p class="copyright">Copyright 2016 &copy; Torio Kids. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">BOYS</a>
+                    <div class="dropdownMenu">
+                        <ul>
+                            <li><a href="#">Jumper / Dungaree Sets</a></li>
+                            <li><a href="#">Top & Bottom Sets</a></li>
+                            <li><a href="#">Tees & Tops</a></li>
+                            <li><a href="#">Bottoms</a></li>
+                            <li><a href="#">Pajamas</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#">GIRLS</a>
+                    <div class="dropdownMenu">
+                        <ul>
+                            <li><a href="#">Jumper / Dungaree Sets</a></li>
+                            <li><a href="#">Top & Bottom Sets</a></li>
+                            <li><a href="#">Tees & Tops</a></li>
+                            <li><a href="#">Bottoms</a></li>
+                            <li><a href="#">Pajamas</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#">BEST SELLER</a></li>
+                <li><a href="#">SALE</a></li>
+            </ul>
+        </nav>
+        <div class="userNav">
+            <ul>
+                <li><a href="#" class="profileIcon">profile</a></li>
+                <li><a href="javascript:void(0)" class="searchIcon" onClick="show_search_popup();">search</a></li>
+                <li><a href="#" class="cartIcon">cart</a></li>
+            </ul>
+        </div>
+        <section>
+        	<div class="contentWrapper">
+                <div class="mainWrapper nobanner">
+                	<div class="productWrapper">
+                    	<h1>BOYS</h1>
+                        <h4>Versatile Outfits Fit for A Prince</h4>
+                        <br>
+                        <div class="breadCrumb">
+                        	<ul>
+                            	<li><a href="#">SHOP</a></li>
+                                <li><a href="#">BOYS</a></li>
+                                <li>ALL COLLECTIONS</li>
+                            </ul>
+                        </div>
+                        <a href="#" class="filterslideBtn">Filter By</a>
+                        <div class="filterBox">
+                        	<div class="filterWrapper">
+                            	<a href="#" class="mobilecloseBtn" onClick="hide_filter();">closebutton</a>
+                                <div class="categoryTab">
+                                    <h4>Category</h4>
+                                    <ul class="optionBox">
+                                        <li><input type="checkbox" class="optionTab" id="category1"><label for="category1">JUMPER / DUNGAREE SETS</label></li>
+                                        <li><input type="checkbox" class="optionTab" id="category2"><label for="category2">TOP &amp; BOTTOM SETS</label></li>
+                                        <li><input type="checkbox" class="optionTab" id="category3"><label for="category3">TEES &amp; TOPS</label></li>
+                                        <li><input type="checkbox" class="optionTab" id="category4"><label for="category4">BOTTOMS</label></li>
+                                        <li><input type="checkbox" class="optionTab" id="category5"><label for="category5">PAJAMAS</label></li>
+                                    </ul>
+                                </div>
+                                <div class="categoryTab">
+                                    <h4>Size</h4>
+                                    <ul class="optionBox">
+                                        <li><input type="checkbox" class="optionTab" id="size1"><label for="size1">NEWBORN</label></li>
+                                        <li><input type="checkbox" class="optionTab" id="size2"><label for="size2">TODDLER</label></li>
+                                        <li><input type="checkbox" class="optionTab" id="size3"><label for="size3">INFANT</label></li>
+                                        <li><input type="checkbox" class="optionTab" id="size4"><label for="size4">KIDS</label></li>
+                                    </ul>
+                                </div>
+                                <div class="categoryTab">
+                                    <h4>Status</h4>
+                                    <ul class="optionBox">
+                                        <li><input type="checkbox" class="optionTab" id="status1"><label for="status1">NEW ARRIVAL</label></li>
+                                        <li><input type="checkbox" class="optionTab" id="status2"><label for="status2">BEST SELLER</label></li>
+                                        <li><input type="checkbox" class="optionTab" id="status3"><label for="status3">SALE</label></li>
+                                    </ul>
+                                </div>
+                                <div class="filterbuttonBox">
+                                    <a href="#" class="button">Apply Filter</a>
+                                    <a href="#" class="button">Clear All</a>
+                                    <br>
+                                    <a href="#" onClick="hide_filter();return false;">Close</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="productBox">
+                        	<div class="productPanel">
+                            	<div class="productImage">
+                                	<a href="#"><img></a>
+                                </div>
+                                <div class="productDesc">
+                                	<a href="#"><span class="productName">Classic Blue Checkered Dungaree</span></a>
+                                    <span class="productPrice">Rp 329.000</span>
+                                    <span class="productInfo">Newborn (3-18 months)</span>
+                                </div>
+                            </div>
+                            <div class="productPanel">
+                            	<div class="productImage">
+                                	<a href="#"><img></a>
+                                </div>
+                                <div class="productDesc">
+                                	<a href="#"><span class="productName">Kids Rock! Stylish Top</span></a>
+                                    <span class="productPrice">Rp 259.000</span>
+                                    <span class="productInfo">2-8 years old</span>
+                                </div>
+                            </div>
+                            <div class="productPanel">
+                            	<div class="productImage">
+                                	<a href="#"><img></a>
+                                </div>
+                                <div class="productDesc">
+                                	<a href="#"><span class="productName">Honey Bear Dungaree Set</span></a>
+                                    <span class="productPrice">Rp 249.000</span>
+                                    <span class="productInfo">Newborn (3-18 months)</span>
+                                </div>
+                            </div>
+                            <div class="productPanel">
+                            	<div class="productImage">
+                                	<a href="#"><img></a>
+                                </div>
+                                <div class="productDesc">
+                                	<a href="#"><span class="productName">Road 58 Dungaree Set C</span></a>
+                                    <span class="productPrice">Rp 359.000</span>
+                                    <span class="productInfo">Toddler (12-36 months)</span>
+                                </div>
+                            </div>
+                            <div class="productPanel">
+                            	<div class="productImage">
+                                	<a href="#"><img></a>
+                                </div>
+                                <div class="productDesc">
+                                	<a href="#"><span class="productName">Classic Blue Checkered Dungaree</span></a>
+                                    <span class="productPrice">Rp 329.000</span>
+                                    <span class="productInfo">Newborn (3-18 months)</span>
+                                </div>
+                            </div>
+                            <div class="productPanel">
+                            	<div class="productImage">
+                                	<a href="#"><img></a>
+                                </div>
+                                <div class="productDesc">
+                                	<a href="#"><span class="productName">Kids Rock! Stylish Top</span></a>
+                                    <span class="productPrice">Rp 259.000</span>
+                                    <span class="productInfo">2-8 years old</span>
+                                </div>
+                            </div>
+                            <div class="productPanel">
+                            	<div class="productImage">
+                                	<a href="#"><img></a>
+                                </div>
+                                <div class="productDesc">
+                                	<a href="#"><span class="productName">Honey Bear Dungaree Set</span></a>
+                                    <span class="productPrice">Rp 249.000</span>
+                                    <span class="productInfo">Newborn (3-18 months)</span>
+                                </div>
+                            </div>
+                            <div class="productPanel">
+                            	<div class="productImage">
+                                	<a href="#"><img></a>
+                                </div>
+                                <div class="productDesc">
+                                	<a href="#"><span class="productName">Road 58 Dungaree Set C</span></a>
+                                    <span class="productPrice">Rp 359.000</span>
+                                    <span class="productInfo">Toddler (12-36 months)</span>
+                                </div>
+                            </div>
+                            <div class="productPanel">
+                            	<div class="productImage">
+                                	<a href="#"><img></a>
+                                </div>
+                                <div class="productDesc">
+                                	<a href="#"><span class="productName">Classic Blue Checkered Dungaree</span></a>
+                                    <span class="productPrice">Rp 329.000</span>
+                                    <span class="productInfo">Newborn (3-18 months)</span>
+                                </div>
+                            </div>
+                            <div class="productPanel">
+                            	<div class="productImage">
+                                	<a href="#"><img></a>
+                                </div>
+                                <div class="productDesc">
+                                	<a href="#"><span class="productName">Kids Rock! Stylish Top</span></a>
+                                    <span class="productPrice">Rp 259.000</span>
+                                    <span class="productInfo">2-8 years old</span>
+                                </div>
+                            </div>
+                            <div class="productPanel">
+                            	<div class="productImage">
+                                	<a href="#"><img></a>
+                                </div>
+                                <div class="productDesc">
+                                	<a href="#"><span class="productName">Honey Bear Dungaree Set</span></a>
+                                    <span class="productPrice">Rp 249.000</span>
+                                    <span class="productInfo">Newborn (3-18 months)</span>
+                                </div>
+                            </div>
+                            <div class="productPanel">
+                            	<div class="productImage">
+                                	<a href="#"><img></a>
+                                </div>
+                                <div class="productDesc">
+                                	<a href="#"><span class="productName">Road 58 Dungaree Set C</span></a>
+                                    <span class="productPrice">Rp 359.000</span>
+                                    <span class="productInfo">Toddler (12-36 months)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pagingWrapper">
+                        	<ul>
+                            	<li><a href="#">Previous&nbsp;&nbsp;&nbsp;<</a></li>
+                                <li><a href="#" class="recentPage">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">...</a></li>
+                                <li><a href="#">>&nbsp;&nbsp;&nbsp;Next</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="mediaBox">
+                	<div class="subscribeBox">
+                    	<input placeholder="Sign Up Your Email &amp; Get Updates">
+                        <a href="#" class="subscribeBtn">SUBSCRIBE</a>
+                    </div>
+                    <div class="fbLink">
+                    	<p>Get Connected with Us</p>
+                        <a href="#" class="facebookBtn">Facebook</a>
+                    </div>
+                </div>
+                <div class="storepartnerSection">
+                	<p>Find Out the Quality of Torio Kids at</p>
+                    <div class="storeList">
+                        <ul>
+                            <li><a href="#"><img src="../userdata/iconsogo.png"></a></li>
+                            <li><a href="#"><img src="../userdata/iconcentral.png"></a></li>
+                            <li><a href="#"><img src="../userdata/iconlotte.png"></a></li>
+                            <li><a href="#"><img src="../userdata/iconlotus.png"></a></li>
+                            <li><a href="#"><img src="../userdata/iconaeonmall.png"></a></li>
+                        </ul>
+                    </div>
+                    <div class="directChannel"><a href="#" class="orangeLink">Find Out Our Direct Channel</a></div>
+                    <p>Our Product also Available at</p>
+                    <div class="partnerList">
+                        <ul>
+                            <li><a href="http://babyzania.com/en/torio" target="_blank"><img src="../userdata/iconbabyzania.png"></a></li>
+                            <li><a href="http://www.bilna.com/bp/torio" target="_blank"><img src="../userdata/iconbilna.png"></a></li>
+                            <li><a href="https://www.blibli.com/brand/torio" target="_blank"><img src="../userdata/iconblibli.png"></a></li>
+                            <li><a href="http://www.elevenia.co.id/search?q=torio" target="_blank"><img src="../userdata/iconelevenia.png"></a></li>
+                            <li><a href="http://www.lazada.co.id/torio/" target="_blank"><img src="../userdata/iconlazada.png"></a></li>
+                            <li><a href="https://www.mataharimall.com/store/834/torio" target="_blank"><img src="../userdata/iconmataharimall.png"></a></li>
+                            <li><a href="http://www.popazop.com/merchants/torio" target="_blank"><img src="../userdata/iconpopazop.png"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+        	<div class="upperNav">
+            	<ul>
+                	<li><a href="#">ABOUT TORIO KIDS</a></li>
+                    <li><a href="#">CONTACT US</a></li>
+                    <li><a href="#">STORE</a></li>
+                    <li><a href="#">E-CHANNEL</a></li>
+                    <li><a href="#">NEED HELP?</a></li>
+                    <li><a href="#">PAYMENT CONFIRMATION</a></li>
+                </ul>
+                <div class="bankLink">
+                	<p>Secure Payments via</p>
+                    <img src="images/bankicon.png">
+                </div>
+            </div>
+            <div class="bottomNav">
+            	<ul>
+                	<li><a href="#">Terms &amp; Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+                <p>Copyright 2016 &copy; Torio Kids. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+    <div class="popupWrapper">
+    	<div class="overlay" onClick="hide_popup();"></div>
+        <div class="popupBox" id="searchPopup">
+            <a href="javascript:void(0)" class="closeBtn" onClick="hide_popup();"></a>
+            <h3>SEARCH</h3>
+            <input placeholder="Search Here" id="searchText">
+            <a href="#" class="defBtn">Search Your Style</a>
+        </div>
+    </div>
+</body>
+</html>

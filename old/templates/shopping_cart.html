@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="target-densitydpi=device-dpi; width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+<meta name="HandheldFriendly" content="true" />
+<title>Torio Kids</title>
+<link href="css/fontAttach/stylesheet.css" rel="stylesheet" type="text/css" />
+<link href="css/torio.css" rel="stylesheet" type="text/css" />
+<link href="css/jquery.bxslider.css" rel="stylesheet" type="text/css">
+<script> var base_url='';</script>
+<script type="text/javascript" src="js/jquery.min.1.8.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.9.2.custom.min.js"></script>
+<script type="text/javascript" src="js/jquery.validationEngine.js"></script>
+<script type="text/javascript" src="js/jquery.validationEngine-en.js"></script>
+<script type="text/javascript" src="js/jquery.uniform.js"></script>
+<script type="text/javascript" src="js/jquery.slides.min.js"></script>
+<script type="text/javascript" src="js/jquery.bxSlider.min.js"></script>
+<script type="text/javascript" src="js/combodate.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<![endif]-->
+</head>
+
+<body>
+<div id="container">
+	<header id="headerCon">
+    	<div class="headerBox">
+    		<div id="logoContainer"><h1><a id="logo" href="index.html" title="Torio Kids">Torio Kids</a></h1>
+        	</div>
+            <div class="headerRight">
+            	<div class="headerRightTop">
+                    <div class="login">
+                    	Please <a class="loginBtn" href="#">login</a> or <a class="regBtn" href="#">register</a> here
+                    </div>
+                    <p>Welcome, Guest!</p>
+                </div>
+                <div class="headerRightBot">
+                	<div class="shoppingCart">
+                    	<div class="shoppingCartLeft">
+                        	<div class="notif"><a href="#" class="notifNumber">01</a></div>
+                        </div>
+                        <div class="shoppingCartRight">
+                        	<p class="bigBlueColor">IDR. 500.000</p>
+                            <form><input type="submit" class="checkoutBtn" value="Checkout" /></form>
+                        </div>
+        			</div>
+                </div>
+            </div>
+            <a href="#" class="menuMobile"></a>
+            <div class="qtyCartMobileBox">
+            	<div class="qtyCartMobile">
+            		<div class="notif"><a href="#" class="notifNumber">99</a></div>
+        		</div>
+           	</div>
+        </div>
+    </header>
+    <nav id="navCon">
+    	<div class="navBox">
+            <div class="navMenu">
+            	<ul>
+                    <li><a href="product_landing.html">Baby Boy</a>
+                		<ul>
+                    		<li><a href="product_list.html">New Arrivals</a></li>
+                        	<li><a href="product_list.html">Toddler</a></li>
+                        	<li><a href="product_list.html">Infant</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="product_landing.html">Baby Girl</a>
+                    	<ul>
+                    		<li><a href="product_list.html">New Arrivals</a></li>
+                        	<li><a href="product_list.html">Toddler</a></li>
+                        </ul></li>
+                    <li><a href="product_landing.html">Boys</a>
+                    	<ul>
+                    		<li><a href="product_list.html">New Arrivals</a></li>
+                    	</ul>
+                    </li>
+                    <li><a href="product_landing.html">Girls</a></li>
+                    <li><a href="product_landing.html">Clearance Sale</a>
+                        <ul>
+                            <li><a href="product_list.html">New Arrivals</a></li>
+                            <li><a href="product_list.html">Toddler</a></li>
+                            <li><a href="product_list.html">Infant</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="searchBox">
+            	<div class="searchBoxLeft">Search
+                </div>
+                <div class="searchBoxRight">
+                <form>
+                	<input class="searchBoxinputTxtS" type="text" /><input class="searchBoxInputBtn" type="submit" />
+                </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section id="content">
+    	<div class="shopCartContent">
+        	<h2>My Shopping Cart</h2>
+            <div class="stepShopping">
+                <div class="firstStepDone">
+                    Shopping Cart
+                </div>
+                <div class="otherStep">
+                    Shipping
+                </div>
+                <div class="lastStep">
+                    Payment
+                </div>
+            </div>
+        </div>
+        <div class="topShopCartInfo" id="topShopCartTitle">
+        	<div class="leftShopCartInfo">Item
+            </div>
+            <div class="rightShopCartInfo">
+            	<div class="rightBox">Quantity
+                </div>
+                <div class="rightBox">Unit Price
+                </div>
+                <div class="rightBox">Subtotal
+                </div>
+                <div class="rightBox">Discount
+                </div>
+                <div class="rightBlackBox">Total
+                </div>
+            </div>
+        </div>
+        <div class="midShopCartInfo">
+        	<div class="shopCartImgCon">
+            	<div class="shopCartImg">
+                	<a href="#"><img src="images/fashionBoy.jpg" /></a>
+                </div>
+            </div>
+            <div class="shopCartDetail">
+            	<div class="productNameCart"><a href="#">Product Name if the name is very very long and ridiculously long</a>
+                </div>
+                <div class="rightBox">
+                	<div class="quantityWrap">
+                        <a href="#" class="minQuan"></a>
+                        <input type="text" class="insertTxt" value="2" />
+                        <a href="#" class="addQuan"></a>
+                    </div>
+                </div>
+                <div class="rightBox del">Rp 100.000,-
+                </div> 
+                <div class="rightBox linethrough">Rp 200.000,-
+                </div>
+                <div class="rightBox del">(Rp 50.000,-)
+                </div>
+                <div class="rightBox">Rp 150.000,-
+                </div>
+                <a href="#" class="remove"></a>
+            </div>
+        </div>
+        <div class="midShopCartInfo2">
+        	<div class="shopCartImgCon">
+            	<div class="shopCartImg">
+                	<a href="#"><img src="images/product1.jpg" /></a>
+                </div>
+            </div>
+            <div class="shopCartDetail">
+            	<div class="productNameCart"><a href="#">Product Name</a>
+                </div>
+                <div class="rightBox">
+                	<div class="quantityWrap">
+                        <a href="#" class="minQuan"></a>
+                        <input type="text" class="insertTxt" value="1" />
+                        <a href="#" class="addQuan"></a>
+                    </div>
+                </div>
+                <div class="rightBox del">Rp 100.000,-
+                </div>
+                <div class="rightBox linethrough">Rp 100.000,-
+                </div>
+                <div class="rightBox del">(Rp 100.000,-)
+                </div>
+                <div class="rightBox">Rp 100.000,-
+                </div>
+                <a href="#" class="remove"></a>
+            </div>
+        </div>
+        <div class="midShopCartInfo">
+        	<div class="shopCartImgCon">
+            	<div class="shopCartImg">
+                	<a href="#"><img src="#" /></a>
+                </div>
+            </div>
+            <div class="shopCartDetail">
+            	<div class="productNameCart"><a href="#">Product Name</a>
+                </div>
+                <div class="rightBox">
+                	<div class="quantityWrap">
+                        <a href="#" class="minQuan"></a>
+                        <input type="text" class="insertTxt" value="1" />
+                        <a href="#" class="addQuan"></a>
+                    </div>
+                </div>
+                <div class="rightBox del">Rp 100.000,-
+                </div>
+                <div class="rightBox linethrough">Rp 100.000,-
+                </div>
+                <div class="rightBox del">(Rp 100.000,-)
+                </div>
+                <div class="rightBox">Rp 100.000,-
+                </div>
+                <a href="#" class="remove"></a>
+            </div>
+        </div>
+        <div class="midShopCartInfo2">
+        	<div class="shopCartImgCon">
+            	<div class="shopCartImg">
+                	<a href="#"><img src="#" /></a>
+                </div>
+            </div>
+            <div class="shopCartDetail">
+            	<div class="productNameCart"><a href="#">Product Name</a>
+                </div>
+                <div class="rightBox">
+                	<div class="quantityWrap">
+                        <a href="#" class="minQuan"></a>
+                        <input type="text" class="insertTxt" value="1" />
+                        <a href="#" class="addQuan"></a>
+                    </div>
+                </div>
+                <div class="rightBox del">Rp 100.000,-
+                </div>
+                <div class="rightBox linethrough">Rp 100.000,-
+                </div>
+                <div class="rightBox del">(Rp 100.000,-)
+                </div>
+                <div class="rightBox">Rp 100.000,-
+                </div>
+                <a href="#" class="remove"></a>
+            </div>
+        </div>
+        <div class="topShopCartInfo" id="cartMobile">
+            <div class="updateCart">
+                <a href="#">Update Cart</a>
+            </div>
+            <div class="clearCart">
+                <a href="#">Clear Shopping Cart</a>
+            </div>
+        </div>
+        <div class="botShopCartInfo">
+            <div class="botLeftCart">
+                  <div class="promotionWrap">
+                    <div class="buttonBox" id="promo_used" style="display:none;">
+                        
+                        <div class="voucherBox" id="applied_voucher" style="display:none;cursor:default;"><img src="http://www.toriokids.com/templates/images/voucher-img.png">You have coupon applied</div>
+                        
+                        <div class="stampBox" id="stamps_voucher" style="display:none;cursor:default;"><img src="http://www.toriokids.com/templates/images/stamp-img.png">You have stamps redemeed</div>
+                        
+                                        
+                        <a href="#" class="rmv" >Cancel, I want to remove.</a>
+                        <div style="text-align:right;display:none;" id="used_loader">
+                            <img src="http://www.toriokids.com/templates/images/ajax-loader.gif" />
+                        </div>
+                    </div>
+                    <div class="buttonBox" id="promo_start">
+						<a href="#" class="voucherBox" id="voucher_btn"><img src="http://www.toriokids.com/templates/images/voucher-img.png"> Have a coupon code ?</a>
+					</div>
+                    <div class="voucherCon">
+                        Enter your Coupon Code
+                        <form id="voucher_form" name="voucher_form" method="post" action="#">
+                        <input type="text" name="coupoun" id="coupon_code">
+                        <div class="buttonCon" id="button_con">
+                            <a href="#" id="cancel_coupon" title="Cancel">cancel</a>   
+                            <input type="submit" value="Apply" id="submit_voucher_btn">
+                        </div>
+                        <div class="buttonCon" id="voucher_form_loader" style="display:none;">
+                            <img src="http://www.toriokids.com/templates/images/ajax-loader.gif">
+                        </div>
+                        </form>           
+                    </div>
+                 </div>  
+			</div>
+          
+            <div class="botRightCartCon">
+                <div class="botRightCart">
+                    <table id="grand_total_table">                     
+                                                            <tr>
+                            <td width="200">Discounted Items</td>
+                            <td width="50">IDR.</td>
+                            <td width="150" style="text-align:right;"><div class="totalPrice">0,-</div></td>
+                        </tr>
+                        <tr>
+                            <td width="200">Non-discounted Items</td>
+                            <td width="50">IDR.</td>
+                            <td width="150" style="text-align:right;"><div class="totalPrice">666.000,-</div></td>
+                        </tr>
+                        <tr>
+                            <td width="200">Grand Total</td>
+                            <td width="50">IDR.</td>
+                            <td width="150" style="text-align:right;"><div class="totalPrice">666.000,-</div></td>
+                        </tr>
+                    </table>
+                </div>
+                
+                        <div class="proceed"><a href="http://www.toriokids.com/shopping_cart/shipping" >Proceed to Next Step</a></div>
+                    </div>   
+        </div>
+    </section>
+    <footer id="footerCon">
+    	<div class="footerBox">
+        	<div class="footerTop">
+                <div class="footer400">
+                	<div class="footerImg">
+                    </div>
+                    <div class="torioUpdate">
+                    	<h3 class="blueFooter">Get Torio Updates</h3>
+                        <div class="longBar"></div>
+                        <p class="blue14">Put Your Email Below</p>
+                        <form>
+                        	<input class="emailTxt" type="text" /></input>
+                            <input class="emailBtn" type="submit" value=""></input>
+                        </form>
+                        <p class="blue10">And Enjoy special privileges from us.</p>
+                    </div>
+                </div>
+                <div class="footer160">
+                	<h3 class="blueFooter">Help</h3>
+                	<div class="shortBar"></div>
+                	<ul>
+                    	<li><a href="#">Payment Confirmation</a></li>
+                    	<li><a href="#">Customer Care</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Return &ampl Exchange</a></li>
+                        <li><a href="#">Ordering</a></li>
+                    </ul>
+                </div>
+                <div class="footer160">
+                	<h3 class="blueFooter">About Torio Kids</h3>
+                	<div class="shortBar"></div>
+                	<ul>
+                    	<li><a href="#">Our Story</a></li>
+                        <li><a href="#">People</a></li>
+                        <li><a href="#">Our Values</a></li>
+                        <li><a href="#">News</a></li>
+                    </ul>
+                </div>
+                <div class="footer160">
+                	<h3 class="blueFooter">Connect With Us</h3>
+                	<div class="shortBar"></div>
+                	<ul>
+                    	<li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Pinterest</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navMobile">
+            	<ul>
+                    <li><a href="#">About Torio Kids</a></li>
+                    <li>&bull;<a href="#">Store Location</a></li>
+                    <li>&bull;<a href="#">Contact Us</a></li>
+                    <li>&bull;<a href="#">FAQs</a></li>
+                    <li>&bull;<a href="#">Privacy Policy</a></li>
+                    <li>&bull;<a href="#">Terms</a></li>
+                </ul>
+            </div>
+            <div class="footerBot">
+                <div class="footerLeft">
+                    <img alt="BCA, VISA, MasterCard Logo" title="Torio accepts payment from BCA, VISA and MasterCard" src="images/bank-logo.png">
+                </div>
+                <div class="footerRight">
+                    Copyright 2013 © Torio Kids. All rights reserved. | Website by <a href="www.isysedge.com">ISYS</a>
+                </div>
+             </div>
+        </div>
+    </footer>
+    <div class="sideMenuPopup">
+        <div class="overlayTrans"></div>
+        <div class="sideMenuBox">
+            <div class="sideMenuContent">
+                <div class="loginButton">
+                    <a href="#" class="signIn">Sign In</a>
+                    <a href="#" class="reg">Register</a>
+                </div>
+                <ul class="categorySideMobile">
+                    <li><a href="#">New Arrivals</a></li>
+                    <li><a href="#">Girls</a></li>
+                    <li><a href="#">Boys</a></li>
+                    <li><a href="#">Sale</a></li>
+                    <li><a href="#">Best Seller</a></li>
+                </ul>
+                <ul class="footerSideMobile">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Store Location</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+        	</div>
+		</div>
+    </div>
+</div>
+<script>
+
+$(window).load(function(){
+	$(".combodate select").uniform();
+});
+$(function(){
+	$('#dob').combodate({
+		firstItem: 'name',	
+		errorClass:'error_date',
+		maxYear:2013,
+		minYear:1920
+	});
+});
+
+</script>
+<div id="overlay" class="overlay" style="display:block;"></div>
+<div id="completePopup" class="completePopup" style="display:none;">
+	<div class="popupContent">
+        <h2>Before We Continue...</h2>
+        <br><br>
+        <p style="font-size:18px;">Please complete these following information to speed up your checkout.</p>
+            <form>
+                <table width="500" align="center">
+                    <tr>
+                        <td width="30%" align="left" style="padding-left:12px;">Date of Birth</td>
+                        <td width="70%"><input id="dob" data-format="YYYY-MM-DD" data-template="D MMM YYYY" name="dob" type="text" class="inputTxtS">
+                        <span class="notifCity">Let us know your birthday and receives special promotions from Torio Kids!</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left" style="padding-left:12px;">Mobile <span class="redStar">*</span></td>
+                        <td><input type="text" class="inputTxtS"></input></td>
+                    </tr>
+                    <tr>
+                        <td align="left" style="padding-left:12px;">Phone Number <span class="redStar">*</span></td>
+                        <td><input type="text" class="inputTxtS"></input></td>
+                    </tr>
+                    <tr>
+                        <td class="address" align="left" style="padding-left:12px;">Address <span class="redStar">*</span></td>
+                        <td><textarea class="addTxtS"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td align="left" style="padding-left:12px;">City <span class="redStar">*</span></td>
+                        <td><input type="text" class="inputTxtS"></input></td>
+                    </tr>
+                    <tr>
+                        <td align="left" style="padding-left:12px;">Zipcode <span class="redStar">*</span></td>
+                        <td><input type="text" class="inputTxtS"></input></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td align="left">
+                        	<span class="redStar">*</span> is required
+                    	</td>
+                    </tr>
+                </table>
+                <input type="submit" class="btnBg" value="Proced to Next Step"></input>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

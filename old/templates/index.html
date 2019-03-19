@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="target-densitydpi=device-dpi; width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+<meta name="HandheldFriendly" content="true" />
+<title>Torio Kids</title>
+<link href="css/fontAttach/stylesheet.css" rel="stylesheet" type="text/css" />
+<link href="css/torio.css" rel="stylesheet" type="text/css" />
+<link href="css/jquery.bxslider.css" rel="stylesheet" type="text/css">
+<link href="css/jquery.jscrollpane.css" rel="stylesheet" type="text/css">
+<link href="css/flipclock.css" rel="stylesheet" type="text/css">
+<script> var base_url='';</script>
+<script type="text/javascript" src="js/jquery.min.1.8.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.9.2.custom.min.js"></script>
+<script type="text/javascript" src="js/jquery.validationEngine.js"></script>
+<script type="text/javascript" src="js/jquery.validationEngine-en.js"></script>
+<script type="text/javascript" src="js/jquery.uniform.js"></script>
+<script type="text/javascript" src="js/jquery.slides.min.js"></script>
+<script type="text/javascript" src="js/jquery.bxSlider.min.js"></script>
+<script type="text/javascript" src="js/combodate.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script> 
+<script type="text/javascript" src="js/jquery.jscrollpane.min.js"></script>
+<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="js/mwheelIntent.js"></script>
+<script type="text/javascript" src="js/overthrow.js"></script>
+<script type="text/javascript" src="js/countdown.js"></script>
+<script type="text/javascript" src="js/flipclock.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<![endif]-->
+</head>
+
+<body>
+<div id="container">
+	<header id="headerCon">
+    	<div class="headerBox">
+    		<div id="logoContainer"><h1><a id="logo" href="index.html" title="Torio Kids">Torio Kids</a></h1>
+        	</div>
+            <div class="headerRight">
+            	<div class="headerRightTop">
+                    <div class="login">
+                    	Please <a class="loginBtn" href="#">login</a> or <a class="regBtn" href="#">register</a> here
+                    </div>
+                    <p>Happy Shopping at Torio!</p>
+                </div>
+                <div class="headerRightBot">
+                	<div class="shoppingCart">
+                    	<div class="shoppingCartLeft">
+                        	<div class="notif"><a href="#" class="notifNumber">01</a></div>
+                        </div>
+                        <div class="shoppingCartRight">
+                        	<p class="bigBlueColor">IDR. 500.000</p>
+                            <form><input type="submit" class="checkoutBtn" value="Checkout" /></form>
+                        </div>
+        			</div>
+                </div>
+            </div>
+            
+            <a href="#" class="menuMobile"></a>
+            <div class="qtyCartMobileBox">
+            	<a href="#" class="qtyCartMobile"></a>
+                <div class="notif"><a href="#" class="notifNumber">99</a></div>
+           	</div>
+        </div>
+        <div class="fixedHeader">
+        	<div class="fixedHeadeBox">
+            	<h1><a href="#" id="fixedLogo">Torio Kids</a></h1>
+                <ul>
+	                <li><a href="#" class="fixedSellItems">Sell Items</a></li>
+                	<li><a href="#" class="fixedBestSeller">Best Seller</a></li>
+                </ul>
+                <ul>
+                    <li>
+                    	<div class="fixedSearch">
+                        	<span>Search</span>
+                            <div class="fixedSearchBox">
+                            	<input type="text">
+                    			<a href="#" class="searchBtn">Search!</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="fixedCart">
+                        	<div class="fixedCartBg">
+                            	<div class="fixedNotif">
+                                	<a href="#">99</a>
+                                </div>
+                            </div>
+                            <a href="#" class="fixedViewCart">View Cart</a>
+                    	</div>
+                    </li>
+                    <li>
+                    	<a href="#" class="fixedCheckout">Checkout</a>
+                    </li>
+                    <li>
+                    	<a href="#" class="backToTop">back to top</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <nav id="navCon">
+    	<div class="navBox">
+            <div class="navMenu">
+            	<ul>
+                    <li><a href="product_landing.html">Girls</a>
+                    	<div class="dropdownNav">
+                            <div class="dropmenuAge">Baby Boy - 3 to 24 Months</div>
+                            <ul>
+                                <li><a href="product_list.html">New Arrivals</a></li>
+                                <li><a href="product_list.html">Toddler</a></li>
+                                <li><a href="product_list.html">Infant</a></li>
+                            </ul>
+                    	</div>
+                    </li>
+                    <li><a href="product_landing.html">Boys</a>
+                    	<div class="dropdownNav">
+                            <div class="dropmenuAge">Baby Boy - 3 to 24 Months</div>
+                            <ul>
+                                <li><a href="product_list.html">New Arrivals</a></li>
+                                <li><a href="product_list.html">Toddler</a></li>
+                            </ul>
+                    	</div>
+                    </li>
+                    <li class="staticMenu"><a href="#">About Torio</a></li>
+                    <!--<li class="staticMenu"><a href="#">Contact Us</a></li>-->
+                </ul>
+            </div>
+            <ul class="sellContainer">
+            	<li><a href="#" class="saleBtn">Sale</a></li>
+                <li><a href="#" class="bestSellerBtn">Best Seller</a></li>
+            </ul>
+            <div class="searchBox">
+            	<div class="searchBoxLeft">Search
+                </div>
+                <div class="searchBoxRight">
+                <form>
+                	<input class="searchBoxInputTxt" type="text" /><input class="searchBoxInputBtn" type="submit" />
+                </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section id="content">
+    	<div class="searchMobile">
+            <span>Search</span>
+            <div class="searchMobileBox">
+                <input type="text">
+                <a class="searchBtn" href="#">Search!</a>
+            </div>
+        </div>
+        <div class="flashSale">
+        	<div class="desktopFlashSale">
+                <a href="#">
+                    <img src="../userdata/smallbanner/flash_sale.png" alt="flashSaleImg" />
+                    <div class="fsCd"></div>
+                </a>
+        	</div>
+            <div class="mobileFlashSale">
+                <a href="#">
+                    <div class="fsCd"></div>
+                </a>
+                <span class="flashSaleTxt">Ayo belanja! Produk terbatas! Hanya 3 jam saja!</span>
+        	</div>
+        </div>
+        <div class="beforeFlashSale">
+        	<div class="desktopFlashSale">
+                <a href="#">
+                    <img src="../userdata/smallbanner/before_flash_sale.png" alt="flashSaleImg" />
+                    <div class="beforeFsCd"></div>
+                </a>
+           	</div>
+            <div class="mobileFlashSale">
+                <a href="#">
+                    <div class="beforeFsCd"></div>
+                </a>
+                <span class="flashSaleTxt">Tunggu tanggal 5 Februari 2015!</span>
+           	</div>
+        </div>
+    	<div id="banner" class="headBanner">
+        		<a href="#"><img src="../userdata/homebanner/01.jpg"></a>
+                <a href="#"><img src="../userdata/homebanner/02.jpg"></a>
+                <a href="#"><img src="../userdata/homebanner/03.jpg"></a>
+        </div>
+        <div class="smallBanner">
+        	<a href="#"><img src="../userdata/smallbanner/Main_Boys_1.jpg" /></a>
+        </div>
+        <div class="categoryMenu">
+			<a class="orange" href="#">Shop Now</a> <span class="babyGreen size20">&bull;</span>
+            <a class="babyBlue" href="#">Baby Boy</a> <span class="babyGreen size20">&bull;</span>
+            <a class="babyPink" href="#">Baby Girl</a> <span class="babyGreen size20">&bull;</span>
+            <a class="babyBlue" href="#">Boys</a> <span class="babyGreen size20">&bull;</span>
+            <a class="babyPink" href="#">Girls</a>
+        </div>
+        <div class="product">
+        	<ul class="recItemsSlider" id="recItemsSlider">
+            	<li>
+                    <div class="productCon2">
+                        <div class="productImage">
+                            <a href="product_detail.html"><img alt="" title="" src="images/fashionBoy.jpg" /></a>
+                            <a href="product_detail.html" class="viewDetail"></a>
+                            <div class="sale"></div>
+                        </div>
+                        <div class="productTxt">
+                			<h3 class="productName"><a title="" href="#"><b>Vintage Cars 3/4 Fine Twill Pants</b></a></h3>
+                            <span class="discount">IDR. 84.000</span>
+                            <span class="afterDiscount">IDR. 120.000</span>
+                            <div class="ageRange">toddler</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="productCon2">
+                        <div class="productImage">
+                            <a href="product_detail.html"><img alt="" title="" src="images/fashionBoy.jpg" /></a>
+                            <a href="product_detail.html" class="viewDetail"></a>
+                        </div>
+                        <div class="productTxt">
+                			<h3 class="productName"><a title="" href="#"><b>Vintage Cars 3/4 Fine Twill Pants</b></a></h3>
+                            <span class="discount">IDR. 84.000</span>
+                            <span class="afterDiscount">IDR. 120.000</span>
+                            <div class="ageRange">toddler</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="productCon2">
+                        <div class="productImage">
+                            <a href="product_detail.html"><img alt="" title="" src="images/fashionBoy.jpg" /></a>
+                            <a href="product_detail.html" class="viewDetail"></a>
+                        </div>
+                        <div class="productTxt">
+                			<h3 class="productName"><a title="" href="#"><b>Vintage Cars 3/4 Fine Twill Pants</b></a></h3>
+                            <span class="discount">IDR. 84.000</span>
+                            <span class="afterDiscount">IDR. 120.000</span>
+                            <div class="ageRange">toddler</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="productCon2">
+                        <div class="productImage">
+                            <a href="product_detail.html"><img alt="" title="" src="images/fashionBoy.jpg" /></a>
+                            <a href="product_detail.html" class="viewDetail"></a>
+                        </div>
+                        <div class="productTxt">
+                			<h3 class="productName"><a title="" href="#"><b>Vintage Cars 3/4 Fine Twill Pants</b></a></h3>
+                            <span class="discount">IDR. 84.000</span>
+                            <span class="afterDiscount">IDR. 120.000</span>
+                            <div class="ageRange">toddler</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="productCon2">
+                        <div class="productImage">
+                            <a href="product_detail.html"><img alt="" title="" src="images/fashionBoy.jpg" /></a>
+                            <a href="product_detail.html" class="viewDetail"></a>
+                        </div>
+                        <div class="productTxt">
+                			<h3 class="productName"><a title="" href="#"><b>Vintage Cars 3/4 Fine Twill Pants</b></a></h3>
+                            <span class="discount">IDR. 84.000</span>
+                            <span class="afterDiscount">IDR. 120.000</span>
+                            <div class="ageRange">toddler</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="productCon2">
+                        <div class="productImage">
+                            <a href="product_detail.html"><img alt="" title="" src="images/fashionBoy.jpg" /></a>
+                            <a href="product_detail.html" class="viewDetail"></a>
+                        </div>
+                        <div class="productTxt">
+                			<h3 class="productName"><a title="" href="#"><b>Vintage Cars 3/4 Fine Twill Pants</b></a></h3>
+                            <span class="discount">IDR. 84.000</span>
+                            <span class="afterDiscount">IDR. 120.000</span>
+                            <div class="ageRange">toddler</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="productCon2">
+                        <div class="productImage">
+                            <a href="product_detail.html"><img alt="" title="" src="images/fashionBoy.jpg" /></a>
+                            <a href="product_detail.html" class="viewDetail"></a>
+                        </div>
+                        <div class="productTxt">
+                			<h3 class="productName"><a title="" href="#"><b>Vintage Cars 3/4 Fine Twill Pants</b></a></h3>
+                            <span class="discount">IDR. 84.000</span>
+                            <span class="afterDiscount">IDR. 120.000</span>
+                            <div class="ageRange">toddler</div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="feature">
+        	<div class="featureBox">
+            	<a class="featImg" href="#"><img src="../userdata/featured/sc_03.04_Swimwear.jpg" /></a>
+                <h3><a href="#">Great Baby Gifts</a></h3>
+            	<p>Find wonderful gifts for 
+baby boy and baby girl from Torio Kids</p>
+        	</div>
+        	<div class="featureBox">
+            	<a class="featImg" href="#"><img src="../userdata/featured/sc_K3_03.04_Baby.jpg" /></a>
+                <h3><a href="#">Introducing Our New Collection</a></h3>
+            	<p>Fun and vibrant girls dresses
+inspired by our trip to China</p>
+        	</div>
+        	<div class="featureBox">
+            	<a class="featImg" href="#"><img src="../userdata/featured/short-sleeve-plaid-shirt-blue.jpg" /></a>
+                <h3><a href="#">Clearance Sale</a></h3>
+           		<p>Shop clearance sale of our collection
+for babies, girls and boys.</p>
+        	</div>
+        </div>
+        <div class="smallBanner2">
+        	<a href="#"><img src="../userdata/smallbanner/Main_Boys_1.jpg" /></a>
+        </div>
+    </section>
+    <footer id="footerCon">
+    	<div class="footerBox">
+        	<div class="footerTop">
+                <div class="footer400">
+                	<div class="footerImg">
+                    </div>
+                    <div class="torioUpdate">
+                    	<h3 class="blueFooter">Get Torio Updates</h3>
+                        <div class="longBar"></div>
+                        <p class="blue14">Put Your Email Below</p>
+                        <form>
+                        	<input class="emailTxt" type="text" /></input>
+                            <input class="emailBtn" type="submit" value=""></input>
+                        </form>
+                        <p class="blue10">And Enjoy special privileges from us.</p>
+                    </div>
+                </div>
+                <div class="footer160">
+                	<h3 class="blueFooter">Help</h3>
+                	<div class="shortBar"></div>
+                	<ul>
+                    	<li><a href="#">Payment Confirmation</a></li>
+                    	<li><a href="#">Customer Care</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Return &ampl Exchange</a></li>
+                        <li><a href="#">Ordering</a></li>
+                    </ul>
+                </div>
+                <div class="footer160">
+                	<h3 class="blueFooter">About Torio Kids</h3>
+                	<div class="shortBar"></div>
+                	<ul>
+                    	<li><a href="#">Our Story</a></li>
+                        <li><a href="#">People</a></li>
+                        <li><a href="#">Our Values</a></li>
+                        <li><a href="#">News</a></li>
+                    </ul>
+                </div>
+                <div class="footer160">
+                	<h3 class="blueFooter">Connect With Us</h3>
+                	<div class="shortBar"></div>
+                	<ul>
+                    	<li class="iconFB"><a href="#">Facebook</a></li>
+                        <li class="iconTW"><a href="#">Twitter</a></li>
+                        <li class="iconPIN"><a href="#">Pinterest</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navMobile">
+            	<ul>
+                    <li><a href="#">About Torio Kids</a></li>
+                    <li>&bull;<a href="#">Store Location</a></li>
+                    <li>&bull;<a href="#">Contact Us</a></li>
+                    <li>&bull;<a href="#">FAQs</a></li>
+                    <li>&bull;<a href="#">Privacy Policy</a></li>
+                    <li>&bull;<a href="#">Terms</a></li>
+                </ul>
+            </div>
+            <div class="footerBot">
+                <div class="footerLeft">
+                    <img alt="BCA, VISA, MasterCard Logo" title="Torio accepts payment from BCA, VISA and MasterCard" src="images/bank-logo.png">
+                </div>
+                <div class="footerRight">
+                    Copyright 2013 © Torio Kids. All rights reserved. <span>Website by <a href="www.isysedge.com">ISYS</a></span>
+                </div>
+             </div>
+        </div>
+        <div class="chatBg"></div>
+    </footer>
+    <div class="sideMenuPopup overthrow">
+        <div class="overlayTrans"></div>
+        <div class="sideMenuBox">
+            <div class="sideMenuContent">
+                <div class="loginButton">
+                    <a href="#" class="signIn">Sign In</a>
+                    <a href="#" class="reg">Register</a>
+                </div>
+                <ul class="categorySideMobile">
+                	<li><a href="#">Home</a></li>
+                    <li><a href="#">New Arrivals</a></li>
+                    <li><a href="#">Girls</a></li>
+                    <li><a href="#">Boys</a></li>
+                    <li><a href="#">Sale</a></li>
+                    <li><a href="#">Best Seller</a></li>
+                </ul>
+                <ul class="footerSideMobile">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Store Location</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+        	</div>
+		</div>
+    </div>
+</div>
+
+</body>
+<script type="text/javascript">
+	var clock;
+	var clock3Hours;
+	
+	$(document).ready(function() {
+		// Instantiate a coutdown FlipClock
+		clock3Hours = $('.desktopFlashSale .fsCd').FlipClock(10800,{
+			clockFace: 'HourlyCounter',
+			countdown:true
+		});
+		mobileClock3Hours = $('.mobileFlashSale .fsCd').FlipClock(10800,{
+			clockFace: 'HourlyCounter',
+			countdown:true
+		});
+		clock = $('.desktopFlashSale .beforeFsCd').FlipClock(3600,{
+			clockFace: 'HourlyCounter',
+			countdown:true
+		});
+		mobileClock = $('.mobileFlashSale .beforeFsCd').FlipClock(3600,{
+			clockFace: 'HourlyCounter',
+			countdown:true
+		});
+		
+	});
+</script>
+</html>

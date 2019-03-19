@@ -1,0 +1,293 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;margin:0;padding:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}ol,ul {list-style:none;}caption,th {text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym {border:0;}
+
+body{
+	font-family:Calibri,Tahoma,Helvetica,Arial,sans-serif;
+	font-size:14px;
+	color:#333;
+	background:#eee;
+	text-align:center;
+}
+
+p{
+	line-height:20px;
+	margin:0 0 15px;
+}
+a{
+	color:#666;
+}
+a:hover{
+	color:#09f;
+}
+h1{
+	font-size:36px;
+}
+h2{
+	font-size:28px;
+}
+h3{
+	font-size:22px;
+}
+h4{
+	font-size:16px;
+}
+.light{
+	color:#777;
+}
+
+#container{
+	display:block;
+	width:960px;
+	margin:0 auto;
+	text-align:left;
+	background:#fff;
+  	-webkit-box-shadow: 0px 0px 8px #999; 
+    -moz-box-shadow: 0px 0px 8px #999; 
+    box-shadow: 0px 0px 8px #999; 
+}
+body.wide #container{
+	width:1216px;
+}
+
+#header{
+	display:block;
+	width:100%;
+	height:120px;
+}
+	.logoContainer{
+		display:block;
+		width:100%;
+		height:120px;
+		background:#ddd;
+	}
+	a#logo{
+		display:block;
+		text-indent:-9999px;
+	}
+
+#contentContainer{
+	display:block;
+	overflow:hidden;
+	margin:10px;
+}
+	#nav{
+		display:block;
+		float:left;
+		width:200px;
+	}
+	#nav ul li{
+		line-height:24px;
+	}
+	#nav ul li ul{
+		list-style:disc;
+		padding-left:25px;
+		margin:0 0 5px;
+	}
+	#nav ul li ul li{
+		font-size:12px;
+	}
+	
+	#content{
+		display:block;
+		float:left;
+		width:730px;
+		margin-left:10px;
+	}
+	body.wide #content{
+		width:986px;
+	}
+	#content ul{
+		list-style:disc;
+		margin:0 0 10px;
+		padding-left:50px;
+	}
+	#content ul li{
+		line-height:20px;
+	}
+	#submenu ul{
+		list-style:none !important;
+		margin:0 !important;
+		padding:0 !important;
+	}
+
+a.defBtn, a.defToggleBtn{
+	display:inline-block;
+	border:1px solid #ccc;
+	padding:5px 10px;
+	margin:10px 0;
+	text-decoration:none;
+	border-radius:3px;	
+  	-webkit-box-shadow: 0px 0px 3px #bbbbbb;
+    -moz-box-shadow: 0px 0px 3px #bbbbbb;
+    box-shadow: 0px 0px 3px #bbbbbb;
+}
+a.defBtn:hover, a.defToggleBtn:hover{
+	border:1px solid #aaa;
+	background:#eee;
+	border-radius:3px;
+}
+
+#footer{
+	display:block;
+	width:100%;
+	height:50px;
+	background:#abc;
+	color:#fff;
+	font-size:11px;
+	line-height:50px;
+	text-align:center;
+}
+
+/*forms*/
+form dl{
+	border-bottom:1px dotted #ccc;
+	padding:10px;
+}
+form.loginForm dl{
+	border:none;
+	padding:5px 0;
+}
+dl.noBorder{
+	border:none;
+}
+dl.highlight{
+	background:#ddf0ff;
+}
+dd{
+	margin:1px 0;
+}
+dt{
+	margin:3px 0;
+	position:relative;
+}
+dt p{
+	margin:0;
+}
+label.autoFade{
+	position:absolute;
+	top:3px;
+	left:4px;
+	z-index:10;
+	color:#aaa;
+}
+label.radioCheck{
+	position:static;
+	color:inherit;
+}
+span.descriptionTxt{
+	font-style:italic;
+	font-size:11px;
+	color:#999;
+}
+input.txtField, textarea.txtField, select.txtField{
+	font-family:Calibri,Tahoma,Helvetica,Arial,sans-serif;
+	font-size:14px;
+	color:#333;
+	background:#eee;
+	border:1px solid #abc;
+	padding:2px;
+	width:50%;
+}
+textarea.txtField{
+	height:150px;
+}
+select.txtField{
+	margin-bottom:10px;
+}
+input.radioBtn, input.checkBox{
+	margin:0 10px 0 0;
+	line-height:20px;
+	display:inline-block;
+	position:relative;
+	top:2px;
+}
+input.defBtn{
+	font-family:Calibri,Tahoma,Helvetica,Arial,sans-serif;
+	font-size:15px;
+	padding:0 10px;
+}
+
+label.error{
+	color:#f00;
+	font-size:11px;
+	position:relative;
+	left:0;
+	top:0;
+}
+
+.formToggleContainer{
+	display:none;
+	margin:0 0 10px;
+	padding:0 0 5px;
+	border-bottom:1px dotted #ccc;
+}
+/*end forms*/
+
+/*tables*/
+.defAdminTable{
+	margin:10px 0;
+}
+.defAdminTable th{
+	padding:10px 5px;
+	background:#444;
+	border:1px solid #000;
+	font-size:15px;
+	font-weight:bold;
+	color:#eee;
+}
+.defAdminTable td{
+	padding:8px 5px;
+	font-size:13px;
+	border:1px dotted #ccc;
+}
+.defAdminTable tbody tr:nth-child(odd){
+	background-color:#fefefe;
+	border:1px solid #aaa;
+}
+.defAdminTable tbody tr:nth-child(even){
+	background-color:#eee;
+	border:1px solid #aaa;
+}
+.defAdminTable tbody tr:nth-child(odd):hover{
+	background-color:#ddf0ff;
+}
+.defAdminTable tbody tr:nth-child(even):hover{
+	background-color:#ddf0ff;
+}
+.defAdminTable a{
+	color:#4868ff;
+}
+/*end tables*/
+
+/*overriding classes*/
+.el-rte .toolbar ul{
+	padding:0 !important;
+}
+.flexigrid{
+	font-family:Calibri,Tahoma,Helvetica,Arial,sans-serif !important;
+	font-size:12px !important;
+}
+
+/*tablecms*/
+.prodStatus thead{}
+.prodStatus thead tr{width:100%;}
+.prodStatus table {
+            width: 100%;
+}
+
+	.prodStatus thead, .prodStatus tbody, .prodStatus tr, .prodStatus td, .prodStatus th { display: block; height:50px }
+	.prodStatus tbody td, .prodStatus thead th {
+		float: left;
+	}
+	.prodStatus tr th, .prodStatus tr td{-moz-box-sizing:border-box;box-sizing:-webkit-border-box;box-sizing:border-box;}}
+	.prodStatus tr:after {
+		content: ' ';
+		display: block;
+		visibility: hidden;
+		clear: both;
+	}
+	
+	.prodStatus thead{width:100%;}

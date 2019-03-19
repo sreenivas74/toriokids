@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="target-densitydpi=device-dpi; width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+<meta name="HandheldFriendly" content="true" />
+<title>Torio Kids</title>
+<link href="css/fontAttach/stylesheet.css" rel="stylesheet" type="text/css" />
+<link href="css/torio.css" rel="stylesheet" type="text/css" />
+<link href="css/uniform.default.css" rel="stylesheet" type="text/css">
+<link href="css/jquery.bxslider.css" rel="stylesheet" type="text/css">
+<link href="css/jquery-ui.css" rel="stylesheet" type="text/css">
+<script> var base_url='http://dev.isysedge.com/toriokids/';</script>
+<script type="text/javascript" src="js/jquery.min.1.8.js"></script>
+<script type="text/javascript" src="js/jquery.validationEngine.js"></script>
+<script type="text/javascript" src="js/jquery.validationEngine-en.js"></script>
+<script type="text/javascript" src="js/jquery.uniform.js"></script>
+<script type="text/javascript" src="js/jquery.slides.min.js"></script>
+<script type="text/javascript" src="js/jquery.bxSlider.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<![endif]-->
+ <script>
+(function( $ ) {
+$.widget( "custom.combobox", {
+_create: function() {
+this.wrapper = $( "<span>" )
+.addClass( "custom-combobox" )
+.insertAfter( this.element );
+this.element.hide();
+this._createAutocomplete();
+this._createShowAllButton();
+},
+_createAutocomplete: function() {
+var selected = this.element.children( ":selected" ),
+value = selected.val() ? selected.text() : "";
+this.input = $( "<input>" )
+.appendTo( this.wrapper )
+.val( value )
+.attr( "title", "" )
+.addClass( "custom-combobox-input ui-widget ui-widget-content ui-state-default ui-corner-left" )
+.autocomplete({
+delay: 0,
+minLength: 0,
+source: $.proxy( this, "_source" )
+})
+.tooltip({
+tooltipClass: "ui-state-highlight"
+});
+this._on( this.input, {
+autocompleteselect: function( event, ui ) {
+ui.item.option.selected = true;
+this._trigger( "select", event, {
+item: ui.item.option
+});
+},
+autocompletechange: "_removeIfInvalid"
+});
+},
+_createShowAllButton: function() {
+var input = this.input,
+wasOpen = false;
+$( "<a>" )
+.attr( "tabIndex", -1 )
+.attr( "title", "Show All Items" )
+.tooltip()
+.appendTo( this.wrapper )
+.button({
+icons: {
+primary: "ui-icon-triangle-1-s"
+},
+text: false
+})
+.removeClass( "ui-corner-all" )
+.addClass( "custom-combobox-toggle ui-corner-right" )
+.mousedown(function() {
+wasOpen = input.autocomplete( "widget" ).is( ":visible" );
+})
+.click(function() {
+input.focus();
+// Close if already visible
+if ( wasOpen ) {
+return;
+}
+// Pass empty string as value to search for, displaying all results
+input.autocomplete( "search", "" );
+});
+},
+_source: function( request, response ) {
+var matcher = new RegExp( $.ui.autocomplete.escapeRegex(request.term), "i" );
+response( this.element.children( "option" ).map(function() {
+var text = $( this ).text();
+if ( this.value && ( !request.term || matcher.test(text) ) )
+return {
+label: text,
+value: text,
+option: this
+};
+}) );
+},
+_removeIfInvalid: function( event, ui ) {
+// Selected an item, nothing to do
+if ( ui.item ) {
+return;
+}
+// Search for a match (case-insensitive)
+var value = this.input.val(),
+valueLowerCase = value.toLowerCase(),
+valid = false;
+this.element.children( "option" ).each(function() {
+if ( $( this ).text().toLowerCase() === valueLowerCase ) {
+this.selected = valid = true;
+return false;
+}
+});
+// Found a match, nothing to do
+if ( valid ) {
+return;
+}
+// Remove invalid value
+this.input
+.val( "" )
+.attr( "title", value + " didn't match any item" )
+.tooltip( "open" );
+this.element.val( "" );
+this._delay(function() {
+this.input.tooltip( "close" ).attr( "title", "" );
+}, 2500 );
+this.input.autocomplete( "instance" ).term = "";
+},
+_destroy: function() {
+this.wrapper.remove();
+this.element.show();
+}
+});
+})( jQuery );
+$(function() {
+$( "#combobox" ).combobox();
+});
+</script>
+ <style>
+.custom-combobox {
+position: relative;
+display: inline-block;
+}
+.custom-combobox-toggle {
+position: absolute;
+top: 0;
+bottom: 0;
+margin-left: -1px;
+padding: 0;
+}
+.custom-combobox-input {
+margin: 0;
+height:22px;
+font-size:12px !important;
+padding:0 5px;
+font-weight:normal;
+width:223px;
+}
+</style>
+</head>
+
+<body>
+<div id="container">
+	<header id="headerCon">
+    	<div class="headerBox">
+    		<div id="logoContainer"><h1><a id="logo" href="index.html" title="Torio Kids">Torio Kids</a></h1>
+        	</div>
+            <div class="headerRight">
+            	<div class="headerRightTop">
+                    <div class="login">
+                    	Please <a class="loginBtn" href="#">login</a> or <a class="regBtn" href="#">register</a> here
+                    </div>
+                    <p>Welcome, Guest!</p>
+                </div>
+                <div class="headerRightBot">
+                	<div class="shoppingCart">
+                    	<div class="shoppingCartLeft">
+                        	<div class="notif"><a href="#" class="notifNumber">01</a></div>
+                        </div>
+                        <div class="shoppingCartRight">
+                        	<p class="bigBlueColor">IDR. 500.000</p>
+                            <form><input type="submit" class="checkoutBtn" value="Checkout" /></form>
+                        </div>
+        			</div>
+                </div>
+            </div>
+            <a href="#" class="menuMobile"></a>
+            <div class="qtyCartMobileBox">
+            	<div class="qtyCartMobile">
+            		<div class="notif"><a href="#" class="notifNumber">99</a></div>
+        		</div>
+           	</div>
+        </div>
+    </header>
+    <nav id="navCon">
+    	<div class="navBox">
+            <div class="navMenu">
+            	<ul>
+                    <li><a href="product_landing.html">Baby Boy</a>
+                		<ul>
+                    		<li><a href="product_list.html">New Arrivals</a></li>
+                        	<li><a href="product_list.html">Toddler</a></li>
+                        	<li><a href="product_list.html">Infant</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="product_landing.html">Baby Girl</a>
+                    	<ul>
+                    		<li><a href="product_list.html">New Arrivals</a></li>
+                        	<li><a href="product_list.html">Toddler</a></li>
+                        </ul></li>
+                    <li><a href="product_landing.html">Boys</a>
+                    	<ul>
+                    		<li><a href="product_list.html">New Arrivals</a></li>
+                    	</ul>
+                    </li>
+                    <li><a href="product_landing.html">Girls</a></li>
+                    <li><a href="product_landing.html">Clearance Sale</a>
+                        <ul>
+                            <li><a href="product_list.html">New Arrivals</a></li>
+                            <li><a href="product_list.html">Toddler</a></li>
+                            <li><a href="product_list.html">Infant</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="searchBox">
+            	<div class="searchBoxLeft">Search
+                </div>
+                <div class="searchBoxRight">
+                <form>
+                	<input class="searchBoxInputTxt" type="text" /><input class="searchBoxInputBtn" type="submit" />
+                </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section id="content">
+    	<div class="shopCartContent">
+        	<h2>Enter Shipping Address</h2>
+            <div class="stepShopping">
+                <div class="firstStepDone">
+                    Shopping Cart
+                </div>
+                <div class="otherStepDone">
+                    Shipping
+                </div>
+                <div class="lastStep">
+                    Payment
+                </div>
+            </div>
+        </div>
+        <div class="topShopCartInfo">
+        </div>
+        <form>
+        <div class="shippingCon">
+        	<div class="shippingBox">
+            	<div class="shippingCol">
+                	<div class="shipping">
+                    	<dd>Sender Name</dd>
+                        <dt><input type="text" class="textTxt"></input></dt>
+                    </div>
+                	<div class="shipping">
+                        <dd>Recipient Name</dd>
+                        <dt><input type="text" class="textTxt"></input></dt>
+                    </div>
+                    <div class="shipping">
+                        <dd>Select Recipient</dd>
+                        <dt>
+                            <select class="recipient">
+                                <option value="option1" >1</option>
+                                <option value="option2" >2</option>
+                                <option value="option3" >3</option>
+                            </select>
+                        </dt>
+                    </div>
+                </div>
+                <div class="shippingCol">
+                	<div class="shipping" id="space">
+                    	<dd>Address</dd>
+                        <dt>
+                        	<div class="ui-widget">
+                                <select id="combobox">
+                                    <option value="">Select one...</option>
+                                    <option value="ActionScript">ActionScript</option>
+                                    <option value="AppleScript">AppleScript</option>
+                                    <option value="Asp">Asp</option>
+                                    <option value="BASIC">BASIC</option>
+                                    <option value="C">C</option>
+                                    <option value="C++">C++</option>
+                                    <option value="Clojure">Clojure</option>
+                                    <option value="COBOL">COBOL</option>
+                                    <option value="ColdFusion">ColdFusion</option>
+                                    <option value="Erlang">Erlang</option>
+                                    <option value="Fortran">Fortran</option>
+                                    <option value="Groovy">Groovy</option>
+                                    <option value="Haskell">Haskell</option>
+                                    <option value="Java">Java</option>
+                                    <option value="JavaScript">JavaScript</option>
+                                    <option value="Lisp">Lisp</option>
+                                    <option value="Perl">Perl</option>
+                                    <option value="PHP">PHP</option>
+                                    <option value="Python">Python</option>
+                                    <option value="Ruby">Ruby</option>
+                                    <option value="Scala">Scala</option>
+                                    <option value="Scheme">Scheme</option>
+                            	</select>
+                            </div>
+                        </dt>
+                    </div>
+                    <div class="shipping">
+                        <dd>Phone Number</dd>
+                        <dt><input type="text" class="textTxt"></input></dt>
+                    </div>
+                    <div class="shipping">
+                        <dd>Mobile</dd>
+                        <dt><input type="text" class="textTxt"></input></dt>
+                    </div>
+                </div>
+            </div>
+            <div class="shippingBox2">
+           		<div class="shippingCol">
+                	<div class="shipping">
+                        <dd>Shipping Address</dd>
+                        <dt><textarea rows="6" class="addressTxt"></textarea></dt>
+                    </div>
+                    <div class="shipping" id="requireMsg">
+                        <dd>* is required</dd>
+                    </div>
+                </div>
+                <div class="shippingCol">
+                	<div class="shipping">
+                        <dd>City</dd>
+                        <dt><input type="text" class="textTxt" id="autoCity"></input></dt>
+                    </div>
+                    <div class="shipping">
+                        <dd>Zip Code</dd>
+                        <dt><input type="text" class="textTxt"></input></dt>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="topShopCartInfo">
+        </div>
+        <div class="botShopCartInfo">
+        	<div class="botLeftCart">
+            	<p>Please enter your information and the shipping address information above. Review and ensure that the data is correct before you confirm your order. Torio is not responsible for failure of delivery in result of mistaken address and/or any other shipping information.</p>
+            </div>
+            <div class="botRightCartCon">
+                <div class="proceed"><a href="#">Proceed to Next Step</a>
+                </div>
+            </div>
+        </div>
+        </form>
+    </section>
+    <footer id="footerCon">
+    	<div class="footerBox">
+        	<div class="footerTop">
+                <div class="footer400">
+                	<div class="footerImg">
+                    </div>
+                    <div class="torioUpdate">
+                    	<h3 class="blueFooter">Get Torio Updates</h3>
+                        <div class="longBar"></div>
+                        <p class="blue14">Put Your Email Below</p>
+                        <form>
+                        	<input class="emailTxt" type="text" /></input>
+                            <input class="emailBtn" type="submit" value=""></input>
+                        </form>
+                        <p class="blue10">And Enjoy special privileges from us.</p>
+                    </div>
+                </div>
+                <div class="footer160">
+                	<h3 class="blueFooter">Help</h3>
+                	<div class="shortBar"></div>
+                	<ul>
+                    	<li><a href="#">Payment Confirmation</a></li>
+                    	<li><a href="#">Customer Care</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Return &ampl Exchange</a></li>
+                        <li><a href="#">Ordering</a></li>
+                    </ul>
+                </div>
+                <div class="footer160">
+                	<h3 class="blueFooter">About Torio Kids</h3>
+                	<div class="shortBar"></div>
+                	<ul>
+                    	<li><a href="#">Our Story</a></li>
+                        <li><a href="#">People</a></li>
+                        <li><a href="#">Our Values</a></li>
+                        <li><a href="#">News</a></li>
+                    </ul>
+                </div>
+                <div class="footer160">
+                	<h3 class="blueFooter">Connect With Us</h3>
+                	<div class="shortBar"></div>
+                	<ul>
+                    	<li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Pinterest</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navMobile">
+            	<ul>
+                    <li><a href="#">About Torio Kids</a></li>
+                    <li>&bull;<a href="#">Store Location</a></li>
+                    <li>&bull;<a href="#">Contact Us</a></li>
+                    <li>&bull;<a href="#">FAQs</a></li>
+                    <li>&bull;<a href="#">Privacy Policy</a></li>
+                    <li>&bull;<a href="#">Terms</a></li>
+                </ul>
+            </div>
+            <div class="footerBot">
+                <div class="footerLeft">
+                    <img alt="BCA, VISA, MasterCard Logo" title="Torio accepts payment from BCA, VISA and MasterCard" src="images/bank-logo.png">
+                </div>
+                <div class="footerRight">
+                    Copyright 2013 © Torio Kids. All rights reserved. | Website by <a href="www.isysedge.com">ISYS</a>
+                </div>
+             </div>
+        </div>
+    </footer>
+    <div class="sideMenuPopup">
+        <div class="overlayTrans"></div>
+        <div class="sideMenuBox">
+            <div class="sideMenuContent">
+                <div class="loginButton">
+                    <a href="#" class="signIn">Sign In</a>
+                    <a href="#" class="reg">Register</a>
+                </div>
+                <ul class="categorySideMobile">
+                    <li><a href="#">New Arrivals</a></li>
+                    <li><a href="#">Girls</a></li>
+                    <li><a href="#">Boys</a></li>
+                    <li><a href="#">Sale</a></li>
+                    <li><a href="#">Best Seller</a></li>
+                </ul>
+                <ul class="footerSideMobile">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Store Location</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+        	</div>
+		</div>
+    </div>
+</div>
+</body>
+</html>

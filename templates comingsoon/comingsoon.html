@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Coming Soon | Torio Kids 2016</title>
+<meta name="viewport" content="target-densitydpi=device-dpi; width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+<meta name="HandheldFriendly" content="true" />
+<link href="css/fontAttach/fontattach.css" rel="stylesheet" type="text/css">
+<link href="css/comingsoontorio.css" rel="stylesheet" type="text/css">
+<link rel="icon" type="image/png" href="http://www.toriokids.com/favicon.png" />
+<script src="js/jquery-2.1.3.min.js"></script>
+<script src="js/main.js"></script>
+</head>
+
+<body>
+	<div class="wrapper">
+    	<div class="comingsoonWrapper">
+        	<div class="comingsoonBGleft"></div>
+            <div class="comingsoonBGright"></div>
+        	<div class="logo">
+            	<img src="images/toriologocomingsoon.png">
+            </div>
+            <p>We are upgrading our website for better experience<br>Please kindly contact <a href="mailto:cs@toriokids.com" class="mail">cs@toriokids.com</a> for any inquiries</p>
+            <span>To see more of Torio, visit us at these stores below</span>
+            <div class="storeList">
+            	<ul>
+                	<li><img src="images/iconsogo.png"></li>
+                    <li><img src="images/iconcentral.png"></li>
+                    <li><img src="images/iconlotte.png"></li>
+                    <li><img src="images/iconlotus.png"></li>
+                    <li><img src="images/iconaeonmall.png"></li>
+                </ul>
+            </div>
+            <span>If you are interested to purchase our products online<br>you can also visit our partners below!</span>
+			<div class="partnerList">
+            	<ul>
+                	<li><a href="http://babyzania.com/en/torio" target="_blank"><img src="images/iconbabyzania.png"></a></li>
+                    <li><a href="http://www.bilna.com/bp/torio" target="_blank"><img src="images/iconbilna.png"></a></li>
+                    <li><a href="https://www.blibli.com/brand/torio" target="_blank"><img src="images/iconblibli.png"></a></li>
+                    <li><a href="http://www.elevenia.co.id/search?q=torio" target="_blank"><img src="images/iconelevenia.png"></a></li>
+                    <li><a href="http://www.lazada.co.id/torio/" target="_blank"><img src="images/iconlazada.png"></a></li>
+                    <li><a href="https://www.mataharimall.com/store/834/torio" target="_blank"><img src="images/iconmataharimall.png"></a></li>
+                    <li><a href="http://www.zalora.co.id/outlet/?q=torio" target="_blank"><img src="images/iconzalora.png"></a></li>
+                </ul>
+            </div>
+            <span>For US inquiries, please visit</span>
+            <a href="http://www.amazon.com/s/ref=w_bl_sl_s_ap_web_7141123011?ie=UTF8&node=7141123011&field-brandtextbin=Torio" class="USinquiry" target="_blank"><img src="images/iconamazon.png"></a>
+        </div>
+        <div class="groundbottomBG"></div>
+    </div>
+</body>
+<script>
+	$(document).ready(function(){
+		if($(document).height() > $(window).height()){
+			$('.groundbottomBG').css('position','static')
+		}
+	});
+	
+	$(window).load(function(){
+		if($(document).height() > $(window).height()){
+			$('.groundbottomBG').css('position','static')
+		}
+	});
+	
+	$(window).bind('resize', function(){
+		if($(document).height() > $(window).height()){
+			$('.groundbottomBG').css('position','static')
+		}
+	})
+</script>
+</html>
